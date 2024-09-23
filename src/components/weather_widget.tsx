@@ -106,7 +106,7 @@ export default function WeatherWidgets() {
       return description;
     }
   }
-  //  return the location message 
+  //  return the message related to the location 
   function getLocationMessage(location: string): string {
     const currentHour = new Date().getHours();
     const isNight = currentHour >= 18 || currentHour < 6;
