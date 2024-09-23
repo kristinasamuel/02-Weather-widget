@@ -14,7 +14,7 @@ import { Button } from "./ui/button";
 import { CloudIcon, MapPinIcon, ThermometerIcon } from "lucide-react";
 
 // interace for the weather data
-interface WeatherData {
+interface WeatherDataProps {
   temperature: number;
   description: string;
   location: string;
@@ -23,7 +23,7 @@ interface WeatherData {
 
 export default function WeatherWidgets() {
   const [location, setLocation] = useState<string>("");
-  const [weather, setWeather] = useState<WeatherData | null>(null);
+  const [weather, setWeather] = useState<WeatherDataProps | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -44,7 +44,7 @@ export default function WeatherWidgets() {
         throw new Error("City not found");
       }
       const data = await response.json();
-      const weatherData: WeatherData = {
+      const weatherData: WeatherDataProps = {
         temperature: data.current.temp_c,
         description: data.current.condition.text,
         location: data.location.name,
