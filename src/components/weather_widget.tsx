@@ -116,7 +116,7 @@ export default function WeatherWidgets() {
   //  return the card with specific color ,size and text 
   return (
 <div className="flex justify-center items-center h-screen">
-<Card className="md:w-full md:max-w-md mx-auto text-center border-4 bg-neutral-100 border-black">
+<Card className="md:w-full md:max-w-md mx-auto px-4 w-full text-center border-4 bg-neutral-100 border-black">
         <CardHeader>
           <CardTitle >Weather Widget </CardTitle>
           <CardDescription
