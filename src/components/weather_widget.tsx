@@ -115,12 +115,12 @@ export default function WeatherWidgets() {
   }
   //  return the card with specific color ,size and text 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <Card className="w-full max-w-md mx-auto text-center border-4 bg-neutral-100 border-black">
+<div className="flex justify-center items-center h-screen">
+<Card className="md:w-full md:max-w-md mx-auto text-center border-4 bg-neutral-100 border-black">
         <CardHeader>
           <CardTitle >Weather Widget </CardTitle>
           <CardDescription
-          className="text-xl italic "
+          className="md:text-xl italic "
           >
          Check out the current weather in your city
           </CardDescription>
@@ -128,7 +128,7 @@ export default function WeatherWidgets() {
         <CardContent>
           <form onSubmit={handleSearch} className="flex items-center gap-2">
             <Input
-            className="text-lg border-2 border-black"
+            className="md:text-lg border-2 border-black"
               type="text"
               placeholder="Enter a city name"
               value={location}

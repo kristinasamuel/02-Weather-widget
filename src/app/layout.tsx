@@ -5,7 +5,7 @@ import "./globals.css";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
+  weight: "100 900",   
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -28,15 +28,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
- <div style={{ 
+ <div 
+ className="min-h-screen bg-cover bg-center bg-no-repeat sm:bg-contain md:bg-cover"
+ style={{ 
       backgroundImage: 'url("/images/image4.jpg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       height: '100vh',
-         
-    }}>
+      }}>
         {children}
-        </div>  
+</div>
       </body>
     </html>
   );
